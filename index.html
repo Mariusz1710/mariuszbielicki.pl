@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mariusz Bielicki - a software developer</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<script src="jquery-3.6.0.js"></script>
+	<script src="jquery.scrollTo.min.js"></script>
+	<script src="myhomepage.js"></script>
+</head>
+<body>
+
+<div id="home">
+
+<p>Hello. I'm <span id="name">Mariusz Bielicki</span>.<br/>
+I'm a software developer.<br/>
+<a href="#about" id="link1"><span id="rectangle">View about me <i class="arrow">&#8594</i></span></a>
+</p>
+
+</div>
+
+
+
+<div id="container">
+
+	<div id="menu">
+
+		<p id="menu_home" class="el_menu"><a href="#home" id="a"</a>HOME</a></p>
+		<p id="menu_about" class="el_menu"><a href="#about" id="b">ABOUT</a></p>
+		<p id="menu_portfolio" class="el_menu"><a href="#portfolio" id="c">PORTFOLIO</a></p>
+		<p id="menu_contact" class="el_menu"><a href="#contact" id="d">CONTACT</a></p>
+
+
+	</div>
+
+	<div id="about" class="color">
+		<header>
+			<h1>About</h1>
+		</header>
+		<hr class="line">
+
+		<div class="rect">
+
+			<div class="rec"><div class="col"><i class="icon-graduation-cap"></i></div></div>
+			<div class="rec"><div class="col"><i class="icon-heart"></i></div></div>
+			<div class="rec"><div class="col"><i class="icon-cog-alt"></i></div></div>
+			<div class="rec"><div class="col"><i class="icon-child"></i></div></div>
+			<div style="clear: both"></div>
+
+		</div>
+
+		<div class="rect">
+
+			<div class="rec">Knowledge</div>
+			<div class="rec">Passion</div>
+			<div class="rec">Quality</div>
+			<div class="rec">Teamwork</div>
+			<div style="clear: both"></div>
+
+		</div>
+
+		<div class="presentation">
+
+			<div id="image"><img src="mariusz.jpg"></div><br/>
+			<div class="who">Who's this guy?</div>
+			<div class="text_who">I'm a software developer. I live in Lodz, Poland.<br/>
+			I have serious passion for a computer programming and computer science.</div>
+
+		</div>
+
+		<div class="presentation">
+
+			<div class="language">C++ </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">C# </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">PHP </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">JavaScript </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">Python </div><div class="star">&#9733 &#9733 &#9734 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">SQL </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+			<div class="language">Linux </div><div class="star">&#9733 &#9733 &#9733 &#9734 &#9734</div><div style="clear:both"></div>
+
+		</div>
+	
+	<div style="clear: both"></div>
+
+
+	</div>
+
+	<div id="portfolio" class="color">
+
+		<h1>PORTFOLIO</h1>
+		<hr class="line">
+
+		<div id="menubar">
+
+			<button class="lang" id="all" onclick="color(this,'all')" >ALL</button>
+			<button class="lang" id="cplus" onclick="color(this,'cplusplus.html')" value="Cplusplus">C++</button>
+			<button class="lang" id="csharp" onclick="color(this,'csharp')">C#</button>
+			<button class="lang" id="php" onclick="color(this,'php.html')">PHP</button>
+			<button class="lang" id="js" onclick="color(this,'javascript.html')">JAVASCRPIT</button>
+			<button class="lang" id="python" onclick="color(this,'python')">PYTHON</button>
+		
+		</div>
+
+		<div id="area">
+
+			<div id="progress" style="font-size: 50px;">ALL</div>
+
+
+		</div>
+	</div>
+
+
+
+		
+	<div id="contact" class="color">Contact</div>
+
+
+</div>
+
+<script>
+
+let full = document.documentElement.scrollHeight;
+//alert(full);
+
+let one = document.getElementById("home").scrollHeight;
+let two = document.getElementById("about").scrollHeight;
+let three = document.getElementById("portfolio").scrollHeight;
+let four = document.getElementById("contact").scrollHeight;
+//let five = document.getElementById("fifth").scrollHeight;
+/*
+alert(one);
+alert(two);
+alert(three);
+alert(four);
+alert(five);
+*/
+
+let first = 0;
+let second = one - 30;
+let third = second + two -30 ;
+let fourth = third + three -30;
+let fifth = fourth + four - 30;
+
+
+$(function ()
+		{
+			$.scrollTo(0);
+			$("#link1").click(function () {$.scrollTo($("#about"),1000);});
+			$("#menu_home").click(function () {$.scrollTo($("#home"),1000);});
+			$("#menu_about").click(function () {$.scrollTo($("#about"),1000);});
+			$("#menu_portfolio").click(function () {$.scrollTo($("#portfolio"),1000);});
+			$("#menu_contact").click(function () {$.scrollTo($("#contact"),1000);});
+			//$("#menu_fifth").click(function () {$.scrollTo($("#fifth"),1000);});
+			//$("#link1").click(function () {$.scrollTo($("#about"),500);});
+
+		});
+
+		$(window).scroll(function ()
+		{
+			if($(this).scrollTop()<second)
+			{
+				$("#a").css("color", "#E31B6D");
+				$("#b").css("color", "#FFFFFF");
+				$("#c").css("color", "#FFFFFF");
+				$("#d").css("color", "#FFFFFF");
+				$("#e").css("color", "#FFFFFF");
+			}
+			else if($(this).scrollTop() > second && $(this).scrollTop() < third)
+			{
+				$("#a").css("color", "#FFFFFF");
+				$("#b").css("color", "#E31B6D");
+				$("#c").css("color", "#FFFFFF");
+				$("#d").css("color", "#FFFFFF");
+				$("#e").css("color", "#FFFFFF");
+			}
+			else if($(this).scrollTop() > third && $(this).scrollTop() < fourth)
+			{
+				$("#a").css("color", "#FFFFFF");
+				$("#b").css("color", "#FFFFFF");
+				$("#c").css("color", "#E31B6D");
+				$("#d").css("color", "#FFFFFF");
+				$("#e").css("color", "#FFFFFF");
+			}
+			else if($(this).scrollTop() > fourth && $(this).scrollTop() < fifth)
+			{
+				$("#a").css("color", "#FFFFFF");
+				$("#b").css("color", "#FFFFFF");
+				$("#c").css("color", "#FFFFFF");
+				$("#d").css("color", "#E31B6D");
+				$("#e").css("color", "#FFFFFF");
+			}
+			else if($(this).scrollTop() > fifth)
+			{
+				$("#a").css("color", "#FFFFFF");
+				$("#b").css("color", "#FFFFFF");
+				$("#c").css("color", "#FFFFFF");
+				$("#d").css("color", "#FFFFFF");
+				$("#e").css("color", "#E31B6D");
+
+			}
+
+
+		});
+
+		function color(but,url)
+		{
+			let arr = []; 
+			arr[0] = document.getElementById("all");
+			arr[1] = document.getElementById("cplus");
+			arr[2] = document.getElementById("csharp");
+			arr[3] = document.getElementById("php");
+			arr[4] = document.getElementById("js");
+			arr[5] = document.getElementById("python");
+
+			for(i=0; i<6; i++)
+			{
+				if(arr[i] === document.activeElement)
+				{
+				arr[i].style.backgroundColor = "#E31B6D";
+				arr[i].style.color = "white";
+				}
+				else
+				{
+					arr[i].style.backgroundColor = "#F5F5F5";
+					arr[i].style.color = "#555555";
+				}
+			}
+		
+			let pro = document.getElementById("progress");
+
+			if(but == arr[0]) pro.innerHTML = "ALL";
+			/*if(but == arr[1]) pro.innerHTML = "C++";
+			if(but == arr[2]) pro.innerHTML = "C#";
+			if(but == arr[3]) pro.innerHTML = "PHP";
+			if(but == arr[4]) pro.innerHTML = "JavaScript";
+			if(but == arr[5]) pro.innerHTML = "Python";
+*/
+
+			let xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function ()
+			{
+				if(this.status == 200 && this.readyState == 4)
+				{	
+					document.getElementById("area").innerHTML = this.responseText;
+					//thiqakqaqak
+				}
+			}
+
+
+			//alert(language);
+
+				xhttp.open("GET",url,true);
+				xhttp.open("GET",url,true);
+				xhttp.send();
+
+		}
+
+
+</script>
+
+</body>
+</html>

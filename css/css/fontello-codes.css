@@ -1,0 +1,15 @@
+
+.icon-heart:before { content: '\e800'; } /* '' */
+.icon-cog-alt:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-mail:before { content: '\e803'; } /* '' */
+.icon-phone-squared:before { content: '\f098'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-graduation-cap:before { content: '\f19d'; } /* '' */
+.icon-child:before { content: '\f1ae'; } /* '' */
+.icon-github-squared:before { content: '\f300'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+.icon-linkedin-1:before { content: '\f318'; } /* '' */
+.icon-linkedin-circled:before { content: '\f319'; } /* '' */
